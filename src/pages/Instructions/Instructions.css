@@ -1,0 +1,57 @@
+.heading h3 {
+    font-size: 25px;
+    padding: 0px 30px;
+    font-weight: 600;
+}
+
+.points p {
+    padding: 0px 50px;
+    font-size: 15px;
+}
+
+.points span {
+    font-size: 20px;
+    font-weight: 600;
+    color: dodgerblue;
+}
+
+.wish {
+    text-align: center;
+    padding: 10px;
+}
+
+.instruction-btn{
+    padding: 15px 30px;
+}
+
+@media screen and (max-width:700px){
+    .heading h3 {
+        padding: 10px 30px;
+    }
+    .wish{
+        padding: 40px;
+    }
+    .points p {
+        padding: 10px 50px;
+        font-size: 20px;
+    }
+    .instruction-btn{
+        padding: 25px 50px;
+    }
+}
+
+@media screen and (max-width:400px){
+    .heading h3{
+        font-size: 20px;
+    }
+    .points p {
+        padding: 0px 50px;
+        font-size: 15px;
+    }
+    .wish{
+        padding: 20px;
+    }
+    .instruction-btn {
+        padding: 26px 30px;
+    }
+}

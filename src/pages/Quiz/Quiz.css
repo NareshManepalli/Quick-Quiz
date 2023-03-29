@@ -1,0 +1,101 @@
+.heading h5{
+  font-size: 17px;
+  padding: 10px 30px;
+  font-weight: 600;
+}  
+
+.heading span{
+  color: dodgerblue;
+  font-size: 20px;
+}
+
+.questions{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.question h5{
+  font-size: 20px;
+  padding: 5px 50px;
+}
+
+.question span{
+  color: maroon;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.answers button{
+  margin: 5px;
+  padding: 7px;
+  width: 500px;
+  border-radius: 15px;
+  background-color: skyblue;
+  border: none;
+}
+
+.answers button:hover{
+  background-color: dodgerblue;
+  color: #fff;
+}
+
+
+.quiz-btn{
+  padding: 25px 30px;
+}
+
+
+@media  screen and (max-width:700px) {
+  .heading h5{
+    font-size: 20px;
+    padding: 20px;
+  }
+  .heading span{
+    font-size: 23px;
+  }
+  .question h5{
+    font-size: 25px;
+    padding: 20px 50px;
+  }
+  .question span{
+    font-size: 30px;
+  }
+  .answers button{
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+  } 
+  .quiz-btn{
+    margin-top: 110px;
+    padding: 25px 50px;
+  } 
+}
+
+@media  screen and (max-width:400px) {
+  .heading h5{
+    font-size: 15px;
+    padding: 10px;
+  }
+  .heading span{
+    font-size: 18px;
+  }
+  .question h5{
+    font-size: 15px;
+    padding: 15px;
+  }
+  .question span{
+    font-size: 16px;
+  }
+  .answers button{
+    font-size: 15px;
+    margin: 10px;
+    width: 300px;
+    padding: 15px;
+    border-radius: 15px;
+  } 
+  .quiz-btn{
+    margin-top: 130px;
+    padding: 25px 50px;
+  } 
+}

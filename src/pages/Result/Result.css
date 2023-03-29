@@ -1,0 +1,97 @@
+.result-sub h4 {
+    justify-content: center;
+    text-align: center;
+    font-size: 27px;
+    font-weight: 700;
+    color: DarkSlateGrey;
+}
+
+.result-sub p {
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    color: Gray;
+}
+
+.score {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.score img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+.score p {
+    font-size: 15px;
+}
+
+.score h5 {
+    font-size: 40px;
+    font-weight: 800;
+    color: darkgreen;
+}
+
+.result-btn{
+    padding: 20px 30px;
+}
+
+
+@media screen and (max-width:700px) {
+    .result-sub h4 {
+        font-size: 40px;
+        padding: 10px;
+    }
+    .result-sub p {
+        font-size: 25px;
+    }
+    .score {
+        margin: 40px;
+    }
+    .score img {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 20px;
+    }
+    .score p {
+        font-size: 25px;
+        margin-top: 20px;
+    }
+    .score h5 {
+        font-size: 70px;
+    }
+    .result-btn {
+        padding: 30px 50px;
+    }
+
+}
+
+
+@media screen and (max-width:400px) {
+    .result-sub h4 {
+        font-size: 20px;
+        padding: 0px;
+    }
+    .result-sub p {
+        font-size: 15px;
+    }
+    .score img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+    .score p {
+        font-size: 15px;
+        margin-top: 20px;
+    }
+    .score h5 {
+        font-size: 70px;
+    }
+    .result-btn {
+        padding: 45px 30px;
+    }
+}

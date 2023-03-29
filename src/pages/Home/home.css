@@ -1,0 +1,92 @@
+.container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.container .hm-img {
+    text-align: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.container .hm-img img {
+    max-width: 60%;
+    height: 65%;
+}
+
+.hm-text h5 {
+    font-family: 'Righteous', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+}
+
+.hm-text span {
+    color: dodgerblue;
+}
+
+.hm-text p {
+    font-size: small;
+    color: gray;
+}
+
+.hm-text input[type=text] {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 10px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.hm-text input[type=submit] {
+    background-color: CornflowerBlue;
+    color: white;
+    padding: 10px 20px;
+    margin: 18px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.hm-text input[type=submit]:hover {
+    background-color: dodgerblue;
+}
+
+.hm-text input[type=submit]:active {
+    transform: translateY(1px);
+}
+
+.hm-text {
+    padding: 20px 40px;
+}
+
+
+@media (max-width: 700px) {
+    .container {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    .main {
+        padding: 30px 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .hm-img img {
+        width: 45%;
+        height: 45%;
+    }
+    .hm-img p {
+        font-size: 15px;
+    }
+    .hm-text {
+        padding-top: 20px;
+    }
+}
