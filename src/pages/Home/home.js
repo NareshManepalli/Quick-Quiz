@@ -7,6 +7,7 @@ function HomePage() {
     const [finame, setFiname] = useState('');
     const [laname, setLaname] = useState('');
     const navigate = useNavigate();
+    console.log(finame);
   
     const handleSubmit = (e) => {
         e.preventDefault();
