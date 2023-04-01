@@ -38,6 +38,31 @@
     padding: 30px;
 }
 
+
+.alert-box{
+    background-color: #fff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 250px;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 70px 250px;
+}
+
+.alert-box img {
+    margin-bottom: 30px;
+}
+.alert-box h5{
+    font-size: 19px;
+    padding-bottom: 20px;
+}
+
+.alert-box span{
+    color: dodgerblue;
+}
+
 @media (max-width: 700px) {
     .topics-list {
         grid-template-columns: repeat(2, 2fr);
@@ -54,6 +79,11 @@
     }
     .topic-btn{
         padding: 25px 50px;
+    }
+    .alert-box{
+        margin: 100px 150px;
+        width: 60%;
+        height: 280px;
     }
 }
 
@@ -80,4 +110,13 @@
     .topic-btn{
         padding: 28px 30px;
     }
+    .alert-box{
+        margin: 150px 35px;
+        width: 80%;
+        height: 300px;
+    }
+    .alert-box h5{
+        font-size: 15px;
+    }
 }
+
