@@ -40,11 +40,9 @@
   color: #fff;
 }
 
-
 .quiz-btn{
   padding: 25px 30px;
 }
-
 
 @media  screen and (max-width:700px) {
   .heading h5{

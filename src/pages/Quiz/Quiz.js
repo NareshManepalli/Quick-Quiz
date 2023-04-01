@@ -15,8 +15,11 @@ function Quiz() {
     const [correctAns, setCorrectAns] = useState(0);
     const [showResult, setShowResult] = useState(false);
     const [clicked, setClicked] = useState(false);
+    const [options, setOptions] = useState(false);
 
     const handleAnswer = (isCorrect) => {
+        document.getElementById('sub').style.display = "flex";
+        setOptions(true)
         if (isCorrect) {
             setScore(score + 10);
             setCorrectAns(correctAns + 1);
@@ -25,6 +28,8 @@ function Quiz() {
     }
 
     const handleNextOption = () => {
+        document.getElementById('sub').style.display = "none";
+        setOptions(false);
         setClicked(false);
         const nextQuestion = currentQuestion + 1;
         if (nextQuestion < questions[course].length) {
@@ -57,12 +62,13 @@ function Quiz() {
                                 <div className="question">
                                     <h5><span>Question:</span> {questions[course][currentQuestion].Question}</h5>
                                 </div>
-                                <div className="answers">
+                                <div className="answers" id="ans-btn">
                                     {questions[course][currentQuestion].answerOptions.map((ans, i) => {
                                         return (
                                             <>
                                             <button
                                                 key={i}
+                                                disabled={options}
                                                 onClick={() => handleAnswer(ans.isCorrect)}
                                             >
                                                 {ans.answerText}
@@ -74,9 +80,9 @@ function Quiz() {
                                 <div className="button quiz-btn">
                                     <button onClick={handleQuit}>Quit</button>
                                     {currentQuestion === questions[course].length - 1 ? (
-                                        <button disabled={!clicked} onClick={handleNextOption}>Finish</button>
+                                        <button id="sub" style={{display: 'none'}} disabled={!clicked} onClick={handleNextOption}>Finish</button>
                                     ) : (
-                                        <button disabled={!clicked} onClick={handleNextOption}>Next Question</button>
+                                        <button id="sub" style={{display: 'none'}} disabled={!clicked} onClick={handleNextOption}>Next Question</button>
                                     )}
                                 </div>
                             </div>
