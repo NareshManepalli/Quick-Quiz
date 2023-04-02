@@ -7,19 +7,20 @@ import Css from '../assessts/css.png';
 import Reactjs from '../assessts/reactjs.png';
 import Sql from '../assessts/sql.png';
 
-function Confirm(props) {
-    console.log(props.course)
+function Confirm() {
     const navigate = useNavigate();
+    const course = sessionStorage.getItem('course');
+    console.log(course);
 
     let image = '';
 
-    if(props.course === 'Html'){
+    if(course === 'Html'){
         image=Html;
-    } else if (props.course === 'Css'){
+    } else if (course === 'Css'){
         image = Css;
-    } else if (props.course === 'ReactJS'){
+    } else if (course === 'ReactJS'){
         image = Reactjs;
-    } else if (props.course === 'JavaScript'){
+    } else if (course === 'JavaScript'){
         image = Javascript;
     } else {
         image = Sql;
@@ -27,7 +28,7 @@ function Confirm(props) {
 
     const handleExit =(e)=> {
         e.preventDefault();
-        window.location.reload();
+        navigate('/topics');
     }
 
     const handleQuiz =(e)=> {
@@ -40,7 +41,7 @@ function Confirm(props) {
           <div className="main">
           <div className="alert-box">
               <img src={image} alt="" width={50} height={50}/>
-             <h5 className="message">You Choose <span>{props.course}</span>. please confirm it before you take the quiz</h5>
+             <h5 className="message">You Choose <span>{course}</span>. please confirm it before you take the quiz</h5>
              <div className="button">
                 <button style={{backgroundColor:'red'}} onClick={handleExit}>Cancel</button>
                 <button style={{backgroundColor:'green'}} onClick={handleQuiz}>Confirm</button>

@@ -31,12 +31,11 @@
   padding: 7px;
   width: 500px;
   border-radius: 15px;
-  background-color: skyblue;
   border: none;
 }
 
-.answers button:hover{
-  background-color: dodgerblue;
+.correct{
+  background-color: green;
   color: #fff;
 }
 

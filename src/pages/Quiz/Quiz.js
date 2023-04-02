@@ -67,6 +67,7 @@ function Quiz() {
                                         return (
                                             <>
                                             <button
+                                                className={`${clicked & ans.isCorrect? "correct": null}`}
                                                 key={i}
                                                 disabled={options}
                                                 onClick={() => handleAnswer(ans.isCorrect)}

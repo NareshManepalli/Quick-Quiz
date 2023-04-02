@@ -1,6 +1,5 @@
 import React from "react";
 import './Topics.css';
-import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import Avatar from '../assessts/avatar.png';
 import Js from '../assessts/js.png';
@@ -8,19 +7,15 @@ import Html from '../assessts/html.png';
 import Css from '../assessts/css.png';
 import ReactJs from '../assessts/reactjs.png';
 import Sql from '../assessts/sql.png';
-import Confirm from '../Topics/confirm.js'
 
 function Topics() {
     const faname = sessionStorage.getItem('faname');
     const laname = sessionStorage.getItem('laname');
     const navigate = useNavigate();
-    const [clicked, setClicked] = useState(false);
-    const [selcourse, setSelCourse] = useState('');
 
     function confirmation(course) {
-        setSelCourse(course);
         sessionStorage.setItem('course', course);
-        setClicked(true);
+        navigate('/confirm');
     }
 
     const HtmlBtn = (e) => {
@@ -55,43 +50,39 @@ function Topics() {
 
     return (
         <>
-            {clicked ? (
-                <Confirm course={selcourse}/>
-            ) : (
-                <div className="main">
-                    <div className="logo">
-                        <div className="uname"><img src={Avatar} width={20} height={25} alt="" /> {faname} {laname}</div>
-                        <div className="topics-sub">
-                            <h4>Choose one from categories below & see how many questions you can answer correctly out of 10 questions!</h4>
-                        </div>
+            <div className="main">
+                <div className="logo">
+                    <div className="uname"><img src={Avatar} width={20} height={25} alt="" /> {faname} {laname}</div>
+                    <div className="topics-sub">
+                        <h4>Choose one from categories below & see how many questions you can answer correctly out of 10 questions!</h4>
+                    </div>
 
-                        <div className="container topics-list" id="btn-group">
-                            <button className="topic" onClick={HtmlBtn} value="Html" id="btn-1">
-                                <img src={Html} width={100} height={110} alt="" /><br />Html
-                            </button>
+                    <div className="container topics-list" id="btn-group">
+                        <button className="topic" onClick={HtmlBtn} value="Html" id="btn-1">
+                            <img src={Html} width={100} height={110} alt="" /><br />Html
+                        </button>
 
-                            <button className="topic" onClick={CssBtn} value='Css' id='btn-2' >
-                                <img src={Css} alt="" width={100} height={110} /><br /> Css
-                            </button>
+                        <button className="topic" onClick={CssBtn} value='Css' id='btn-2' >
+                            <img src={Css} alt="" width={100} height={110} /><br /> Css
+                        </button>
 
-                            <button className="topic" onClick={JsBtn} value='JavaScript' id='btn-3' >
-                                <img src={Js} alt="" width={100} height={110} /><br /> JavaScript
-                            </button>
+                        <button className="topic" onClick={JsBtn} value='JavaScript' id='btn-3' >
+                            <img src={Js} alt="" width={100} height={110} /><br /> JavaScript
+                        </button>
 
-                            <button className="topic" onClick={ReactBtn} value='ReactJS' id='btn-4' >
-                                <img src={ReactJs} alt="" width={100} height={110} /><br /> ReactJS
-                            </button>
+                        <button className="topic" onClick={ReactBtn} value='ReactJS' id='btn-4' >
+                            <img src={ReactJs} alt="" width={100} height={110} /><br /> ReactJS
+                        </button>
 
-                            <button className="topic" onClick={MssqlBtn} value='Mssql' id='btn-5' >
-                                <img src={Sql} alt="" width={100} height={110} /><br /> Mssql
-                            </button>
-                        </div>
-                        <div className="button topic-btn">
-                            <button onClick={Home}>Back to Home</button>
-                        </div>
+                        <button className="topic" onClick={MssqlBtn} value='Mssql' id='btn-5' >
+                            <img src={Sql} alt="" width={100} height={110} /><br /> Mssql
+                        </button>
+                    </div>
+                    <div className="button topic-btn">
+                        <button onClick={Home}>Back to Home</button>
                     </div>
                 </div>
-            )}
+            </div>
         </>
     )
 }

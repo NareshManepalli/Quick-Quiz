@@ -7,12 +7,13 @@ function HomePage() {
     const [finame, setFiname] = useState('');
     const [laname, setLaname] = useState('');
     const navigate = useNavigate();
-    console.log(finame);
   
     const handleSubmit = (e) => {
         e.preventDefault();
-        sessionStorage.setItem("faname", finame);
-        sessionStorage.setItem('laname', laname);
+        let first = finame.charAt(0).toUpperCase() + finame.slice(1);
+        let last = laname.charAt(0).toUpperCase() + laname.slice(1);
+        sessionStorage.setItem("faname", first);
+        sessionStorage.setItem('laname', last);
         navigate('/topics', { replace: true });
     }
     return (
