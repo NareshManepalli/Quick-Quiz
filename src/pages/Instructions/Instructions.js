@@ -39,7 +39,7 @@ function Instructions() {
                     <img src={ALB} width={200} height={50} alt=""/>
                 </div>
                 <div className="button instruction-btn">
-                    <button onClick={Back}>Back to Home</button>
+                    <button onClick={Back}>Back to Topics</button>
                     <button onClick={Quiz}>Start Quiz</button>
                 </div>
             </div>
